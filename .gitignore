@@ -1,0 +1,35 @@
+# Ignorer Visual Studio-specifikke filer
+.vs/
+
+# Ignorer build-filer og binære filer
+bin/
+obj/
+
+# Ignorer bruger-specifikke Visual Studio-filer
+*.user
+*.suo
+*.vcxproj.user
+*.csproj.user
+
+# Ignorer afhængigheder fra NuGet
+packages/
+*.nupkg
+project.lock.json
+
+# Ignorer midlertidige filer
+*.log
+*.tmp
+*.cache
+
+# Ignorer resharper filer (hvis du bruger ReSharper)
+*.DotSettings.user
+
+# Ignorer debug- og release-mapper
+Debug/
+Release/
+x64/
+x86/
+
+# Ignorer evt. lokale konfigurationsfiler
+*.local
+*.config
