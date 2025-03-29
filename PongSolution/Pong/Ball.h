@@ -16,6 +16,6 @@ public:
 private: 
 	sf::Vector2f PositionBall; 
 	sf::RectangleShape ballShape; 
-	float xVelocity = .2f;
-	float yVelocity = .2f;
+	float xVelocity = .1f;
+	float yVelocity = .1f;
 };

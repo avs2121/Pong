@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include <conio.h>
 #include <SFML/Graphics.hpp>
+#include <iostream>
 
 using namespace sf; 
 
@@ -21,7 +22,10 @@ int main() {
 
 	Text hud; 
 	Font font; 
-	font.loadFromFile("digital-7.ttf");
+	//font.loadFromFile("digital-7.ttf");
+	if (!font.loadFromFile("C:/Users/Schio/source/repos/Project/Pong/PongSolution/x64/Debug/digital-7.ttf")) {
+		std::cout << "Failed to load font!\n";
+	}
 	hud.setFont(font);
 	hud.setCharacterSize(75);
 	hud.setFillColor(sf::Color::White);
@@ -65,8 +69,20 @@ int main() {
 		if (ball.getBallPosition().intersects(bat.getPosition())) {
 			ball.reboundBatOrTop();
 		}
+
+		ball.update();
+		bat.update(); 
+
+		std::stringstream ss; 
+		ss << "Score: " << score << "	Lives: " << lives;
+		hud.setString(ss.str());
+
+		window.clear(Color(26, 128, 182, 255));
+		window.draw(bat.getShape());
+		window.draw(ball.getShape());
+		window.draw(hud);
+		window.display();
+
 	}
-
-
-
+	return 0; 
 }

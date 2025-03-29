@@ -13,7 +13,7 @@ public:
 
 
 private:
-	float batSpeed = .3f; 
+	float batSpeed = 15.0f; 
 	sf::Vector2f Position;
 	sf::RectangleShape batShape; 
 };

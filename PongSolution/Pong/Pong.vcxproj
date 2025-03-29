@@ -136,7 +136,6 @@
     <ClCompile Include="Ball.cpp" />
     <ClCompile Include="Bat.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Pong.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ball.h" />
